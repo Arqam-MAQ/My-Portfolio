@@ -1,0 +1,136 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0786a3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login {
+      background: white;
+      width: 90%;
+      max-width: 625px;
+      padding: 65px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #555;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    input {
+      width: 100%;
+      padding: 18px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      font-size: 17px;
+    }
+
+    .show {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .show input {
+      width: auto;
+    }
+
+    button {
+      width: 100%;
+      padding: 22px;
+      background: #007797;
+      color: white;
+      border: none;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005d78;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 40px;
+      line-height: 2;
+    }
+
+    a {
+      color: #007797;
+      text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+      .login {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login">
+
+    <h1>Login</h1>
+
+    <form>
+
+      <label>Email:</label>
+      <input type="email" placeholder="Enter email" required>
+
+      <label>Password:</label>
+      <input type="password" id="password"
+             placeholder="Enter password" required>
+
+      <div class="show">
+        <input type="checkbox" id="show">
+        <label for="show" style="margin:0">Show Password</label>
+      </div>
+
+      <button type="submit">SIGN IN</button>
+
+    </form>
+
+    <div class="links">
+      <a href="#">Forgot Username / Password?</a>
+      <br>
+      Don't have an account? <a href="register.html">Sign up</a>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("show").onclick = function() {
+      document.getElementById("password").type =
+        this.checked ? "text" : "password";
+    };
+  </script>
+
+</body>
+</html>
